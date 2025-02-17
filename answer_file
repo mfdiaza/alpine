@@ -3,7 +3,7 @@
 # Use US layout with US variant
 KEYMAPOPTS="latam latam"
 # Set hostname to 'alpine'
-HOSTNAMEOPTS=alpinetunn
+HOSTNAMEOPTS="-n alpinetunn"
 # Set device manager to mdev
 DEVDOPTS=mdev
 # Contents of /etc/network/interfaces
