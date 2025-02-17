@@ -1,0 +1,43 @@
+# # Answerfile para Alpine
+
+# Use US layout with US variant
+KEYMAPOPTS="latam latam"
+# Set hostname to 'alpine'
+HOSTNAMEOPTS=alpinetunn
+# Set device manager to mdev
+DEVDOPTS=mdev
+# Contents of /etc/network/interfaces
+INTERFACESOPTS="auto lo
+iface lo inet loopback
+
+auto eth0
+iface eth0 inet dhcp
+hostname alpinetunn
+
+auto eth1
+iface eth0 inet static
+address 192.168.56.101
+netmask 255.255.255.0
+gateway 192.168.56.2
+"
+# Search domain of example.com, Google public nameserver
+DNSOPTS="8.8.8.8"
+# Set timezone to UTC
+TIMEZONEOPTS="America/Buenos_Aires"
+# set http/ftp proxy
+PROXYOPTS=none
+# Add first mirror (CDN)
+APKREPOSOPTS="-1"
+# Create admin user
+USEROPTS=none
+# Install Openssh
+SSHDOPTS=openssh
+# Use openntpd
+NTPOPTS="chrony"
+# Use /dev/sda as a sys disk
+DISKOPTS="-m sys /dev/sda"
+# Setup storage with label APKOVL for config storage
+LBUOPTS="LABEL=APKOVL"
+LBUOPTS=none
+APKCACHEOPTS="/media/LABEL=APKOVL/cache"
+APKCACHEOPTS=none
